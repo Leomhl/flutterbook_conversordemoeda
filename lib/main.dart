@@ -13,7 +13,7 @@ void main() async {
 }
 
 Future<Map> getData() async {
-  String request = "https://api.hgbrasil.com/finance?format=json&key=5d33880b";
+  String request = "https://api.hgbrasil.com/finance?format=json&key=SUA_API_KEY";
   
   http.Response response = await http.get(request);
   print(json.decode(response.body));
