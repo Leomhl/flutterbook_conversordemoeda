@@ -29,8 +29,8 @@ class _HomeState extends State<Home> {
   final dolarController = TextEditingController();
   final euroController = TextEditingController();
 
-  double dolar;
-  double euro;
+  late double dolar;
+  late double euro;
 
   void _clearAll() {
     realController.text = "";
@@ -99,8 +99,8 @@ class _HomeState extends State<Home> {
                     ));
                   } else {
                     dolar =
-                        snapshot.data["results"]["currencies"]["USD"]["buy"];
-                    euro = snapshot.data["results"]["currencies"]["EUR"]["buy"];
+                        snapshot.data!["results"]["currencies"]["USD"]["buy"];
+                    euro = snapshot.data!["results"]["currencies"]["EUR"]["buy"];
 
                     return SingleChildScrollView(
                       padding: EdgeInsets.all(10.0),
